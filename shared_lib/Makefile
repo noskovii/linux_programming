@@ -8,4 +8,3 @@ exe: solution.h main.c lib
 
 clean:
 	-rm solution libsolution.so 2>/dev/null
-

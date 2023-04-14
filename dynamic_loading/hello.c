@@ -8,4 +8,3 @@ int hello(int a) {
 
     return 1;
 }
-

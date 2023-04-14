@@ -10,4 +10,3 @@ lib: hello.h hello.c
 
 clean:
 	-rm solution libHello.so 2>/dev/null
-

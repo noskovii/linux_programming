@@ -17,4 +17,3 @@ int main()
     printf("%d\n", pid);
     sleep(1000);
 }
-

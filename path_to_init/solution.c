@@ -45,4 +45,3 @@ void print_process_parents(int pid) {
 
     printf("1\n");
 }
-

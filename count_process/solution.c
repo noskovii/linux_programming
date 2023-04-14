@@ -52,4 +52,3 @@ int main() {
     free(namelist);
     printf("%d\n", num);
 }
-
