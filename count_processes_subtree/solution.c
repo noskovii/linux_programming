@@ -4,14 +4,12 @@
  * (включая процесс с заданным pid).
  */
 
-
 #include <dirent.h>
+#include <fcntl.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <unistd.h>
-#include <fcntl.h>
 #include <string.h>
-
+#include <unistd.h>
 
 void find_processes(int *num, int pid) {
     struct dirent **namelist;
@@ -37,8 +35,8 @@ void find_processes(int *num, int pid) {
                     char tmp_chr;
                     int ppid;
 
-                    fscanf(fd, "%d %s %c %d", &tmp_int, tmp_buf,
-                        &tmp_chr, &ppid);
+                    fscanf(fd, "%d %s %c %d", &tmp_int, tmp_buf, &tmp_chr,
+                           &ppid);
                     char name[100];
 
                     fclose(fd);
@@ -53,8 +51,7 @@ void find_processes(int *num, int pid) {
     }
 }
 
-int main(int c, char **v)
-{
+int main(int c, char **v) {
     int pid = atoi(v[1]);
     int count = 1;
 
