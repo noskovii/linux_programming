@@ -3,14 +3,12 @@
  * процессов с именем genenv в системе Linux на которой выполняется программа.
  */
 
-
 #include <dirent.h>
+#include <fcntl.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <unistd.h>
-#include <fcntl.h>
 #include <string.h>
-
+#include <unistd.h>
 
 int main() {
     int pid;
@@ -42,10 +40,9 @@ int main() {
                 fscanf(fd, "%d %s %c %d", &tmp_int, tmp_buf, &tmp_chr, &ppid);
                 char name[100];
 
-                if (strstr(tmp_buf, str) != NULL)
-                    num++;
-                }
+                if (strstr(tmp_buf, str) != NULL) num++;
             }
+        }
         free(namelist[i]);
     }
 
