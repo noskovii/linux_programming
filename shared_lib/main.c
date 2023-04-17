@@ -1,7 +1,6 @@
 #include <stdio.h>
 
-#include "solution.c"
-
+#include "solution.h"
 
 int main(int argc, char *argv[]) {
     int num = 1;
