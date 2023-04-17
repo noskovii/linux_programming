@@ -7,4 +7,4 @@ exe: solution.h main.c lib
 .PHONY: clean
 
 clean:
-	-rm solution libsolution.so 2>/dev/null
+	rm solution libsolution.so 2>/dev/null

@@ -2,18 +2,24 @@
  * Разработать программу solution, которая при запуске себя "демонизирует"
  * и остается в  памяти. Перед закрытием стандартного потока вывода stdout
  * унаследованного от родителя, программа должна вывести в него Pid
- * процесса-демона.
+ * процесса-демона. Снабдить демон обработчиком сигнала SIGURG, по приходу
+ * которого демон должен завершать свою работу.
  */
 
-
-#include <unistd.h>
+#include <signal.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
 
+void handler(int signalno) { exit(0); }
 
-int main()
-{
+int main() {
     daemon(1, 1);
     int pid = getpid();
     printf("%d\n", pid);
-    sleep(1000);
+    signal(SIGURG, handler);
+
+    for (;;) {
+        sleep(1000);
+    }
 }
