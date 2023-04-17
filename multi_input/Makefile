@@ -4,4 +4,4 @@ all:
 .PHONY: clean
 
 clean:
-	-rm solution 2>/dev/null
+	rm solution 2>/dev/null
