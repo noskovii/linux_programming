@@ -9,4 +9,4 @@ lib: hello.h hello.c
 .PHONY: clean
 
 clean:
-	-rm solution libHello.so 2>/dev/null
+	rm solution libHello.so 2>/dev/null
