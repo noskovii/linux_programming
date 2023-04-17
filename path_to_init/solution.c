@@ -5,14 +5,12 @@
  * идентификатор.
  */
 
-
 #include <dirent.h>
+#include <fcntl.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <unistd.h>
-#include <fcntl.h>
 #include <string.h>
-
+#include <unistd.h>
 
 void print_process_parents(int pid);
 
@@ -38,8 +36,8 @@ int get_parent_pid(int current) {
 void print_process_parents(int pid) {
     pid_t current = pid;
 
-    while (current != 1 ) {
-        printf("%d\n",current);
+    while (current != 1) {
+        printf("%d\n", current);
         current = get_parent_pid(current);
     }
 
