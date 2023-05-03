@@ -1,4 +1,4 @@
-/**
+/*
  * Создать разделяемую динамическую библиотеку libsolution.so в которой
  * реализовать функцию со следующим прототипом:
  *     int stringStat(const char *string, size_t multiplier, int *count);
